@@ -1,0 +1,427 @@
+/* src/pages/Dashboard.css - Dashboard page styles */
+
+.dashboard {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* Header */
+.dashboard-header {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
+}
+
+.refresh-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: rgba(244, 67, 54, 0.8);
+}
+
+/* Map placeholder */
+.map-placeholder {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 16px;
+}
+
+.map-placeholder-content {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+  border: 1px dashed #ccc;
+}
+
+.map-note {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+/* Last updated */
+.last-updated {
+  text-align: right;
+  padding: 10px 24px;
+  font-size: 12px;
+  color: #666;
+  background: white;
+  margin: 0 20px;
+  border-radius: 6px;
+}
+
+/* Dark mode button */
+.dark-mode-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.dark-mode-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Register button */
+.register-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.register-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .header-left h1 {
+    font-size: 18px;
+  }
+  
+  .last-updated {
+    text-align: center;
+    margin: 0 10px;
+  }
+}
+
+/* ============================================ */
+/* DARK MODE STYLES
+/* ============================================ */
+
+body.dark-mode {
+  background-color: #121212;
+}
+
+body.dark-mode .dashboard {
+  background-color: #121212;
+}
+
+body.dark-mode .stat-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .stat-card-title {
+  color: #aaa;
+}
+
+body.dark-mode .stat-card-value {
+  color: #90caf9;
+}
+
+body.dark-mode .alerts-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .alerts-section h2 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .alert-table th {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-bottom-color: #444;
+}
+
+body.dark-mode .alert-table td {
+  border-bottom-color: #333;
+  color: #ccc;
+}
+
+body.dark-mode .alert-row:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .consumption-chart {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .chart-header h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .chart-controls button {
+  background-color: #333;
+  color: #ccc;
+}
+
+body.dark-mode .chart-controls button.active {
+  background-color: #1a237e;
+  color: white;
+}
+
+body.dark-mode .map-placeholder {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .map-placeholder h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .map-placeholder-content {
+  background-color: #2a2a2a;
+  color: #aaa;
+}
+
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .modal-header {
+  background: linear-gradient(135deg, #0d1b69 0%, #0a3d8a 100%);
+}
+
+body.dark-mode .modal-header h2 {
+  color: white;
+}
+
+body.dark-mode .detail-label {
+  color: #aaa;
+}
+
+body.dark-mode .detail-value {
+  color: #ccc;
+}
+
+body.dark-mode .modal-footer {
+  background-color: #2a2a2a;
+  border-top-color: #444;
+}
+
+body.dark-mode .notification-dropdown {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .notification-item {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .notification-item:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .notification-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .notification-message {
+  color: #aaa;
+}
+
+body.dark-mode .notification-group {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .group-header {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+body.dark-mode .notification-footer {
+  background-color: #2a2a2a;
+  border-top-color: #444;
+}
+
+body.dark-mode .search-box input {
+  background-color: #333;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .search-box input::placeholder {
+  color: #888;
+}
+
+body.dark-mode .filter-buttons button {
+  background-color: #333;
+  color: #ccc;
+}
+
+body.dark-mode .filter-buttons button:hover {
+  background-color: #444;
+}
+
+body.dark-mode .filter-buttons .filter-active {
+  background-color: #1a237e;
+  color: white;
+}
+
+body.dark-mode .register-btn {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .register-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.billing-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.billing-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tariff-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Active Tariff Info Bar */
+.active-tariff-info {
+  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tariff-icon {
+  font-size: 20px;
+}
+
+.tariff-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.manage-tariff-link {
+  background: none;
+  border: none;
+  color: #1a237e;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+.manage-tariff-link:hover {
+  color: #0d47a1;
+}
+
+/* Dark mode */
+body.dark-mode .active-tariff-info {
+  background: linear-gradient(135deg, #1a1a3a 0%, #2a2a4a 100%);
+}
+
+body.dark-mode .tariff-text {
+  color: #90caf9;
+}
+
+body.dark-mode .manage-tariff-link {
+  color: #90caf9;
+}
+
+/* Auto-billing button */
+.auto-billing-btn {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-left: 12px;
+}
+
+.auto-billing-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+/* Last billing info */
+.last-billing-info {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+body.dark-mode .last-billing-info {
+  background: rgba(255, 255, 255, 0.1);
+}

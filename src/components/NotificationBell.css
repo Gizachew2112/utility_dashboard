@@ -1,0 +1,294 @@
+/* src/components/NotificationBell.css */
+
+.notification-container {
+  position: relative;
+}
+
+.notification-bell {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.notification-bell:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f44336;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 20px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: #ff9800;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 350px;
+  max-width: 90vw;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  color: white;
+}
+
+.notification-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.notification-time {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.notification-empty {
+  padding: 30px;
+  text-align: center;
+  color: #4caf50;
+}
+
+.notification-group {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.group-header {
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fafafa;
+}
+
+.group-header.critical {
+  color: #f44336;
+}
+
+.group-header.warning {
+  color: #ff9800;
+}
+
+.notification-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.notification-item:hover {
+  background: #f9f9f9;
+}
+
+.notification-item.critical {
+  border-left: 3px solid #f44336;
+}
+
+.notification-item.warning {
+  border-left: 3px solid #ff9800;
+}
+
+.notification-icon {
+  font-size: 18px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  font-size: 12px;
+  color: #666;
+}
+
+.notification-more {
+  padding: 8px 15px;
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+  background: #fafafa;
+}
+
+.notification-footer {
+  padding: 12px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.notification-footer button {
+  background: none;
+  border: none;
+  color: #1a237e;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.notification-footer button:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode styles for notification bell */
+
+body.dark-mode .notification-dropdown {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .notification-header {
+  background: linear-gradient(135deg, #0d1b69 0%, #0a3d8a 100%);
+}
+
+body.dark-mode .notification-group {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .group-header {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+body.dark-mode .notification-item {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .notification-item:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .notification-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .notification-message {
+  color: #aaa;
+}
+
+body.dark-mode .notification-more {
+  background-color: #2a2a2a;
+  color: #666;
+}
+
+body.dark-mode .notification-footer {
+  background-color: #2a2a2a;
+  border-top-color: #444;
+}
+
+body.dark-mode .notification-footer button {
+  color: #90caf9;
+}
+
+/* Dark mode styles for notification bell */
+
+body.dark-mode .notification-dropdown {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .notification-header {
+  background: linear-gradient(135deg, #0d1b69 0%, #0a3d8a 100%);
+}
+
+body.dark-mode .notification-group {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .group-header {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+body.dark-mode .notification-item {
+  border-bottom-color: #333;
+}
+
+body.dark-mode .notification-item:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .notification-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .notification-message {
+  color: #aaa;
+}
+
+body.dark-mode .notification-more {
+  background-color: #2a2a2a;
+  color: #666;
+}
+
+body.dark-mode .notification-footer {
+  background-color: #2a2a2a;
+  border-top-color: #444;
+}
+
+body.dark-mode .notification-footer button {
+  color: #90caf9;
+}
