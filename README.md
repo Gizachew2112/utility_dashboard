@@ -34,12 +34,3 @@ Open [http://localhost:3000](http://localhost:3000)
 ### `npm run build`
 Builds the app for production.
 
----
-
-## 📁 Project Structure
-Brief overview of main folders and components (optional but helpful)
-
----
-
-## 👤 Author
-Gizachew B.
